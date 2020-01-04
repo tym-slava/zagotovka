@@ -1,0 +1,38 @@
+.fixed-nav {
+    position: fixed;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    z-index: 9;
+    
+    a {
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, .3);
+        position: relative;
+        text-decoration: none;
+        margin-bottom: 10px;
+        transition: all .3s;
+        color: grey; 
+        
+        &:hover,
+        &:active {
+            color: red;
+            background: red;
+        }
+    }
+
+    span {
+        transition: all .5s;
+        position: absolute;
+        right: -100px;
+    }
+
+    a:hover span,
+    a:active span {
+        right: 40px;
+    }
+
+}

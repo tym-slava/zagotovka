@@ -1,0 +1,67 @@
+
+
+.slider {
+    // @include size(100%);
+    display: flex;
+    justify-content: center;
+
+
+    &__item.card-group {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    &__card {
+        margin: 0 5px;
+    }
+
+    .slick {
+        &-arrow {
+            @include size(50px, 50px);
+            position: absolute;
+            top: 50%;
+            z-index: 9;
+            background: red;
+            font-size: 0;
+            line-height: 0;
+            transform: translateY(-50%);
+            
+        }
+
+        &-prev {
+            left: -25px;
+            
+        }
+
+        &-next {
+            right: -25px;
+            
+        }
+
+        &-dots {
+            bottom: 1px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0;
+            line-height: 0;
+            display: flex;
+
+            li button {
+                background: green;
+                width: 15px;
+                height: 15px;
+                font-size: 0;
+                line-height: 0;
+                margin: 0 5px;
+                border-radius: 50%;
+
+            }
+
+            li.slick-active button {
+                background: blue;
+            }
+        }
+    }
+}
